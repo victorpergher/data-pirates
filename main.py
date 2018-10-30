@@ -34,7 +34,6 @@ def getData(start):
         bsObj = BeautifulSoup(html.read(), features="lxml")
         title = bsObj.findAll("div", {"class":"lister-item mode-advanced"})
         for t in title:
-
             title = t.find('a').find('img').attrs['alt']
             rating = t.find('strong').text
 
